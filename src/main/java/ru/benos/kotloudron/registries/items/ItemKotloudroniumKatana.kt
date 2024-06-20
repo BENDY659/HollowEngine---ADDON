@@ -9,16 +9,17 @@ import net.minecraft.world.level.Level
 import ru.benos.kotloudron.Kotloudron.Companion.MODID
 import ru.benos.kotloudron.registries.KOTLOUDRON_TAB
 
-class ItemKotloudroniumSword: SwordItem(
+class ItemKotloudroniumKatana: SwordItem(
   Tiers.NETHERITE,
-  999999999,
-  1.0E38f,
+  Int.MAX_VALUE,
+  Float.MAX_VALUE,
   Properties()
     .tab(KOTLOUDRON_TAB)
     .stacksTo(1)
     .rarity(Rarity.EPIC)
     .fireResistant()
-) {
+)
+{
   override fun hurtEnemy(pStack: ItemStack, pTarget: LivingEntity, pAttacker: LivingEntity): Boolean {
     pTarget.hurt(DamageSource.playerAttack(pAttacker as Player), 1000000f)
     return super.hurtEnemy(pStack, pTarget, pAttacker)
@@ -26,6 +27,6 @@ class ItemKotloudroniumSword: SwordItem(
 
   override fun appendHoverText(pStack: ItemStack, pLevel: Level?, pTooltipComponents: MutableList<Component>, pIsAdvanced: TooltipFlag) {
     super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced)
-    pTooltipComponents.add(Component.translatable("item.$MODID.kotloudronium_sword_lore"))
+    pTooltipComponents.add(Component.translatable("item.$MODID.kotloudronium_katana_lore"))
   }
 }

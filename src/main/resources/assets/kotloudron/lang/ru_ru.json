@@ -81,5 +81,9 @@
   "kotloudron.gui.theme_select.button.close_desc": "Закрыть",
 
   "kotloudron.blocks": "Kotloudron blocks",
-  "block.kotloudron.kotloudron": "Блок логотип Kotloudron"
+  "block.kotloudron.kotloudron": "Блок логотип Kotloudron",
+
+  "kotloudron.items": "Kotloudron items",
+  "item.kotloudron.kotloudronium_katana": "Kotloudronium катана",
+  "item.kotloudron.kotloudronium_katana_lore": "Максимальная сила языка кода Kotlin!"
 }
